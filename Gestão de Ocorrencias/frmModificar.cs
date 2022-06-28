@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -15,12 +15,12 @@ namespace Gestão_de_Ocorrencias
         }
 
         public Int32 codigoreg;
-
+        public string connectionString {get;set;}
         private void adcModificar_Load(object sender, EventArgs e)
         {
             string connetionString = null;
             SqlConnection cnn;
-            connetionString = @"Data Source=ASUS-PORTATIL\SQLEXPRESS.testes.dbo; Initial Catalog=testes; Persist Security Info=True; User ID=testes; Password=testes";
+            
             cnn = new SqlConnection(connetionString);
             int rowsaffected = 0;
 
@@ -61,7 +61,7 @@ namespace Gestão_de_Ocorrencias
         {
             string connetionString = null;
             SqlConnection cnn;
-            connetionString = @"Data Source=ASUS-PORTATIL\SQLEXPRESS; Initial Catalog=testes; User ID=testes; Password=testes";
+         
             cnn = new SqlConnection(connetionString);
 
             try
@@ -86,7 +86,7 @@ namespace Gestão_de_Ocorrencias
             // Inicia a conexão connetionString a base de dados
             string connetionString = null;
             SqlConnection cnn;
-            connetionString = @"Data Source=ASUS-PORTATIL\SQLEXPRESS.testes.dbo; Initial Catalog=testes; Persist Security Info=True; User ID=testes; Password=testes";
+       
             cnn = new SqlConnection(connetionString);
             int rowsaffected = 0;
             try
